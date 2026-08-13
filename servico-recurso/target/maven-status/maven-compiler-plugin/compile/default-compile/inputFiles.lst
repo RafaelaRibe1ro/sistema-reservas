@@ -1,0 +1,9 @@
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\controller\RecursoController.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\document\Recurso.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\document\TipoRecurso.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\dto\RecursoRequest.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\dto\RecursoResponse.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\exception\RecursoNaoEncontradoException.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\repository\RecursoRepository.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\service\RecursoService.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-recurso\src\main\java\com\reservas\servicorecurso\ServicoRecursoApplication.java

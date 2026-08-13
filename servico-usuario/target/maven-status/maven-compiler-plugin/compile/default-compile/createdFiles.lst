@@ -1,0 +1,10 @@
+com\reservas\servicousuario\dto\UsuarioResponse.class
+com\reservas\servicousuario\exception\UsuarioNaoEncontradoException.class
+com\reservas\servicousuario\entity\Usuario$UsuarioBuilder.class
+com\reservas\servicousuario\dto\UsuarioRequest.class
+com\reservas\servicousuario\exception\EmailJaCadastradoException.class
+com\reservas\servicousuario\repository\UsuarioRepository.class
+com\reservas\servicousuario\service\UsuarioService.class
+com\reservas\servicousuario\ServicoUsuarioApplication.class
+com\reservas\servicousuario\controller\UsuarioController.class
+com\reservas\servicousuario\entity\Usuario.class

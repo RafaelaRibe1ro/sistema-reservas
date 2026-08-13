@@ -1,0 +1,74 @@
+### servico-recurso - exemplos de requisicoes
+### Pode ser executado direto no servico (porta 8082) ou via API Gateway (porta 8080, prefixo /api)
+
+@directUrl = http://localhost:8082
+@gatewayUrl = http://localhost:8080/api
+
+### Criar recurso do tipo QUADRA (atributos proprios desse tipo)
+POST {{gatewayUrl}}/recursos
+Content-Type: application/json
+
+{
+  "nome": "Quadra 1",
+  "tipo": "QUADRA",
+  "capacidade": 10,
+  "atributos": {
+    "esporte": "futebol",
+    "possuiIluminacao": true
+  }
+}
+
+### Criar recurso do tipo QUARTO (atributos bem diferentes da quadra - por isso Mongo)
+POST {{gatewayUrl}}/recursos
+Content-Type: application/json
+
+{
+  "nome": "Quarto 202",
+  "tipo": "QUARTO",
+  "capacidade": 2,
+  "atributos": {
+    "numeroDeCamas": 1,
+    "possuiAcessibilidade": false
+  }
+}
+
+### Criar recurso do tipo SALA
+POST {{gatewayUrl}}/recursos
+Content-Type: application/json
+
+{
+  "nome": "Sala de Reuniao A",
+  "tipo": "SALA",
+  "capacidade": 8,
+  "atributos": {
+    "possuiProjetor": true,
+    "layout": "U"
+  }
+}
+
+### Listar todos os recursos
+GET {{gatewayUrl}}/recursos
+
+### Listar recursos por tipo
+GET {{gatewayUrl}}/recursos?tipo=QUADRA
+
+### Buscar recurso por id (direto no servico)
+GET {{directUrl}}/recursos/REPLACE_COM_ID
+
+### Marcar recurso como indisponivel
+PUT {{directUrl}}/recursos/REPLACE_COM_ID
+Content-Type: application/json
+
+{
+  "nome": "Quadra 1",
+  "tipo": "QUADRA",
+  "capacidade": 10,
+  "atributos": {
+    "esporte": "futebol",
+    "possuiIluminacao": true
+  },
+  "disponivel": false
+}
+
+### Remover recurso
+DELETE {{directUrl}}/recursos/REPLACE_COM_ID

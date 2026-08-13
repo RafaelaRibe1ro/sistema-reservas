@@ -1,0 +1,10 @@
+com\reservas\servicorecurso\controller\RecursoController.class
+com\reservas\servicorecurso\document\Recurso$RecursoBuilder.class
+com\reservas\servicorecurso\repository\RecursoRepository.class
+com\reservas\servicorecurso\dto\RecursoRequest.class
+com\reservas\servicorecurso\dto\RecursoResponse.class
+com\reservas\servicorecurso\exception\RecursoNaoEncontradoException.class
+com\reservas\servicorecurso\service\RecursoService.class
+com\reservas\servicorecurso\ServicoRecursoApplication.class
+com\reservas\servicorecurso\document\TipoRecurso.class
+com\reservas\servicorecurso\document\Recurso.class

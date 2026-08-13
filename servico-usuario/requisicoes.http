@@ -1,0 +1,47 @@
+### servico-usuario - exemplos de requisicoes
+### Pode ser executado direto no servico (porta 8081) ou via API Gateway (porta 8080, prefixo /api)
+
+@directUrl = http://localhost:8081
+@gatewayUrl = http://localhost:8080/api
+
+### Criar usuario (via gateway)
+POST {{gatewayUrl}}/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ana Souza",
+  "email": "ana@example.com",
+  "telefone": "11999990000"
+}
+
+### Listar usuarios (via gateway)
+GET {{gatewayUrl}}/usuarios
+
+### Buscar usuario por id (direto no servico)
+GET {{directUrl}}/usuarios/1
+
+### Atualizar usuario
+PUT {{directUrl}}/usuarios/1
+Content-Type: application/json
+
+{
+  "nome": "Ana Souza Lima",
+  "email": "ana@example.com",
+  "telefone": "11988887777"
+}
+
+### Remover usuario
+DELETE {{directUrl}}/usuarios/1
+
+### Tentar criar usuario com email duplicado -> 409
+POST {{directUrl}}/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Outro Nome",
+  "email": "ana@example.com",
+  "telefone": "11900000000"
+}
+
+### Buscar usuario inexistente -> 404
+GET {{directUrl}}/usuarios/9999

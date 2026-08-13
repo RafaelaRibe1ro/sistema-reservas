@@ -1,0 +1,9 @@
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\controller\UsuarioController.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\dto\UsuarioRequest.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\dto\UsuarioResponse.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\entity\Usuario.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\exception\EmailJaCadastradoException.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\exception\UsuarioNaoEncontradoException.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\repository\UsuarioRepository.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\service\UsuarioService.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-usuario\src\main\java\com\reservas\servicousuario\ServicoUsuarioApplication.java
