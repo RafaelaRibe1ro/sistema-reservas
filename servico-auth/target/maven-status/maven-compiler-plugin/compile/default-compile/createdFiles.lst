@@ -1,0 +1,15 @@
+com\reservas\servicoauth\security\JwtService.class
+com\reservas\servicoauth\service\AuthService.class
+com\reservas\servicoauth\exception\CredenciaisInvalidasException.class
+com\reservas\servicoauth\exception\EmailJaCadastradoException.class
+com\reservas\servicoauth\entity\Credencial.class
+com\reservas\servicoauth\exception\TokenInvalidoException.class
+com\reservas\servicoauth\dto\CredencialResponse.class
+com\reservas\servicoauth\dto\RefreshRequest.class
+com\reservas\servicoauth\dto\TokenResponse.class
+com\reservas\servicoauth\controller\AuthController.class
+com\reservas\servicoauth\ServicoAuthApplication.class
+com\reservas\servicoauth\entity\Credencial$CredencialBuilder.class
+com\reservas\servicoauth\dto\LoginRequest.class
+com\reservas\servicoauth\dto\RegistroRequest.class
+com\reservas\servicoauth\repository\CredencialRepository.class

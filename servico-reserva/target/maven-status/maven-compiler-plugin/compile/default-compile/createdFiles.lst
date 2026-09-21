@@ -15,5 +15,6 @@ com\reservas\servicoreserva\exception\UsuarioNaoEncontradoException.class
 com\reservas\servicoreserva\service\ReservaService.class
 com\reservas\servicoreserva\entity\Reserva.class
 com\reservas\servicoreserva\exception\RecursoIndisponivelException.class
+com\reservas\servicoreserva\security\JwtAuthFilter.class
 com\reservas\servicoreserva\dto\RecursoDto.class
 com\reservas\servicoreserva\ServicoReservaApplication.class

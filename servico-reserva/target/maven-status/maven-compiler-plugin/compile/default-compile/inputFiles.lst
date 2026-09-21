@@ -14,5 +14,6 @@ C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servic
 C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-reserva\src\main\java\com\reservas\servicoreserva\exception\ReservaNaoEncontradaException.java
 C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-reserva\src\main\java\com\reservas\servicoreserva\exception\UsuarioNaoEncontradoException.java
 C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-reserva\src\main\java\com\reservas\servicoreserva\repository\ReservaRepository.java
+C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-reserva\src\main\java\com\reservas\servicoreserva\security\JwtAuthFilter.java
 C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-reserva\src\main\java\com\reservas\servicoreserva\service\ReservaService.java
 C:\Users\User\Documents\INFNET\ENGENHARIAS ESCALÁVEIS\Microsservicos\tp1\servico-reserva\src\main\java\com\reservas\servicoreserva\ServicoReservaApplication.java

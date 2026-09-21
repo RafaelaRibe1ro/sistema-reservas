@@ -9,6 +9,12 @@ spring:
       server:
         webmvc:
           routes:
+            - id: rota-auth
+              uri: lb://servico-auth
+              predicates:
+                - Path=/api/auth/**
+              filters:
+                - StripPrefix=1
             - id: rota-usuario
               uri: lb://servico-usuario
               predicates:

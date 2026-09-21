@@ -1,12 +1,28 @@
 ### servico-reserva - exemplos de requisicoes
 ### Pode ser executado direto no servico (porta 8083) ou via API Gateway (porta 8080, prefixo /api)
 ### Pre-requisito: ja ter criado pelo menos um usuario (servico-usuario) e um recurso disponivel (servico-recurso)
+### Todas as rotas abaixo sao protegidas: exigem um accessToken valido obtido em servico-auth (POST /api/auth/login)
 
 @directUrl = http://localhost:8083
 @gatewayUrl = http://localhost:8080/api
+@accessToken = REPLACE_COM_O_ACCESS_TOKEN
+
+### --- Autenticacao e autorizacao (TP3) ---
+
+### Tentar acessar sem token -> 401
+GET {{gatewayUrl}}/reservas
+
+### Tentar acessar com token invalido -> 401
+GET {{gatewayUrl}}/reservas
+Authorization: Bearer token-invalido
+
+### Acessar rota protegida com token valido -> 200
+GET {{gatewayUrl}}/reservas
+Authorization: Bearer {{accessToken}}
 
 ### Criar reserva (substitua usuarioId e recursoId pelos ids reais retornados por servico-usuario/servico-recurso)
 POST {{gatewayUrl}}/reservas
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
@@ -18,6 +34,7 @@ Content-Type: application/json
 
 ### Tentar reservar o mesmo recurso no mesmo horario -> 409 (conflito)
 POST {{gatewayUrl}}/reservas
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
@@ -29,6 +46,7 @@ Content-Type: application/json
 
 ### Reservar com usuario inexistente -> 404
 POST {{gatewayUrl}}/reservas
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
@@ -40,17 +58,21 @@ Content-Type: application/json
 
 ### Buscar reserva por id
 GET {{directUrl}}/reservas/1
+Authorization: Bearer {{accessToken}}
 
 ### Listar reservas de um usuario
 GET {{gatewayUrl}}/reservas?usuarioId=1
+Authorization: Bearer {{accessToken}}
 
 ### Cancelar reserva
 DELETE {{directUrl}}/reservas/1
+Authorization: Bearer {{accessToken}}
 
 ### --- Teste de resiliencia ---
 ### 1) Pare o servico-recurso (Ctrl+C no terminal dele)
 ### 2) Repita a criacao de reserva abaixo -> deve responder 503 (fallback do Circuit Breaker)
 POST {{gatewayUrl}}/reservas
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {

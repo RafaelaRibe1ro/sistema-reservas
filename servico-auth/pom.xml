@@ -9,15 +9,14 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.reservas</groupId>
-	<artifactId>servico-reserva</artifactId>
+	<artifactId>servico-auth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>servico-reserva</name>
-	<description>Orquestracao de reservas com resiliencia - Sistema de Reservas (TP1)</description>
+	<name>servico-auth</name>
+	<description>Autenticacao e emissao de tokens JWT - Sistema de Reservas (TP1 + TP3)</description>
 
 	<properties>
 		<java.version>21</java.version>
 		<spring-cloud.version>2025.1.2</spring-cloud.version>
-		<resilience4j.version>2.4.0</resilience4j.version>
 		<jjwt.version>0.12.6</jjwt.version>
 	</properties>
 
@@ -25,10 +24,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-http-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,18 +42,14 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-spring-boot4</artifactId>
-			<version>${resilience4j.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>

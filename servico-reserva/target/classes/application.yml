@@ -66,3 +66,7 @@ resilience4j:
 logging:
   level:
     io.github.resilience4j: INFO
+
+jwt:
+  # mesma chave configurada no servico-auth, usada aqui apenas para validar a assinatura do token
+  secret: "tp1-tp3-sistema-de-reservas-chave-secreta-compartilhada-servico-auth-servico-reserva"

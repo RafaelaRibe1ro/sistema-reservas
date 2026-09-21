@@ -1,0 +1,67 @@
+### servico-auth - exemplos de requisicoes
+### Pode ser executado direto no servico (porta 8084) ou via API Gateway (porta 8080, prefixo /api)
+
+@directUrl = http://localhost:8084
+@gatewayUrl = http://localhost:8080/api
+
+### Registrar credencial (via gateway)
+POST {{gatewayUrl}}/auth/registrar
+Content-Type: application/json
+
+{
+  "email": "ana@example.com",
+  "senha": "senha123"
+}
+
+### Tentar registrar o mesmo email de novo -> 409
+POST {{directUrl}}/auth/registrar
+Content-Type: application/json
+
+{
+  "email": "ana@example.com",
+  "senha": "outrasenha"
+}
+
+### Login com credenciais validas -> 200 com accessToken e refreshToken
+POST {{gatewayUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "ana@example.com",
+  "senha": "senha123"
+}
+
+### Login com senha incorreta -> 401
+POST {{directUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "ana@example.com",
+  "senha": "senhaerrada"
+}
+
+### Login com email inexistente -> 401
+POST {{directUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "naoexiste@example.com",
+  "senha": "qualquer"
+}
+
+### Renovar o access token usando o refreshToken retornado no login
+### (substitua REFRESH_TOKEN pelo valor retornado acima)
+POST {{gatewayUrl}}/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "REFRESH_TOKEN"
+}
+
+### Tentar renovar com um refresh token invalido -> 401
+POST {{directUrl}}/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "token-invalido"
+}
